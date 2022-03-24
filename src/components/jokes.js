@@ -40,15 +40,11 @@ class Jokes extends React.Component {
   };
 
   handleSelect = (e) => {
-    // handle selected category
-    // update state with selected category
-    // remove prevues jokes and set loading to true
-    // after state is updated load jokes that is related to given category
+
     this.setState(
       {
         selectedCategory: e.target.value
-        ///jokes: [],
-        //loading: true
+
       },
       this.loadJokes
     );
