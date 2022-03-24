@@ -1,14 +1,17 @@
 import styled from 'styled-components';
+import img from '../assets/fondo.jpg';
 
 export const HeaderStyled = styled.div `
-padding: 7px 16px;
+padding: 7px 10px;
 box-shadow: 1px 1px 9px #d2d2d2;
 margin-bottom: 2rem;
+font-size: 19px;
 header {
   max-width: 800px;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  color:#b83422fa
 }
 `;
 
@@ -41,6 +44,7 @@ padding: 0px 7px;
 `;
 
 export const JokesListStyle = styled.div`
+background-image: linear-gradient(to top, rgba(161, 140, 209, 0.37) 0%, rgba(251, 194, 235, 0.342) 100%),url(${img});
 display: flex;
 flex-direction: column;
 align-items: stretch;
@@ -54,6 +58,7 @@ export const Container = styled.div`
   max-width: 800px;
   height: 100vh;
   margin: 0 auto;
+    
 `;
 
 export const JokeCardStyle = styled.div`
@@ -62,12 +67,13 @@ export const JokeCardStyle = styled.div`
   border: 1px solid #d2d2d2;
   padding: 0.7rem;
   border-radius: 4.71px;
+  background-color:#f0ee94fa;
   font-size: 1rem;
   font-weight: 500;
-  background-color: white;
-  p {
+    p {
     word-break: break-word;
     line-height: 1.4;
   }
+  
 `;
 

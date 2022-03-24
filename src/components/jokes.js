@@ -50,7 +50,7 @@ class Jokes extends React.Component {
     );
   };
 
-  componentDiMount =() => {
+  componentDidMount =() => {
       this.getCategories();
   };
 
