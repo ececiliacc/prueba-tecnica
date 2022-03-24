@@ -11,6 +11,7 @@ class Jokes extends React.Component {
       jokes:[],
       categories:[],
       selectedCategory:"",
+      loading:false,
       parPage:1
   };
 
@@ -38,13 +39,19 @@ class Jokes extends React.Component {
       this.setState({categories})
   };
 
-  handleSelect = e => {
-      this.setState(
-          {
-              selectedCategory: e.target.value,
-          },
-          this.loadJokes
-      );
+  handleSelect = (e) => {
+    // handle selected category
+    // update state with selected category
+    // remove prevues jokes and set loading to true
+    // after state is updated load jokes that is related to given category
+    this.setState(
+      {
+        selectedCategory: e.target.value
+        ///jokes: [],
+        //loading: true
+      },
+      this.loadJokes
+    );
   };
 
   componentDiMount =() => {
