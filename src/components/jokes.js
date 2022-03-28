@@ -31,6 +31,7 @@ class Jokes extends React.Component {
       );
      
       this.setState({ loading: false, jokes: [...jokes, ...newJokes] });
+      localStorage.setItem("jokes", JSON.stringify([...jokes, ...newJokes]) )
     };
   
   getCategories = async () =>{
@@ -44,7 +45,6 @@ class Jokes extends React.Component {
     this.setState(
       {
         selectedCategory: e.target.value
-
       },
       this.loadJokes
     );
@@ -52,6 +52,11 @@ class Jokes extends React.Component {
 
   componentDidMount =() => {
       this.getCategories();
+      const memoryJokes = localStorage.getItem("jokes")
+     
+     if(memoryJokes){
+       this.setState({jokes: JSON.parse(memoryJokes)})
+      }
   };
 
   render () {
